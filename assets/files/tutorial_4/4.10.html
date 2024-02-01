@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial-4.10</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#btn2").click(function () {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn3").click(function () {
+                $("#div1").fadeToggle(5000);
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn4").click(function () {
+                $("#div1").fadeTo("slow", 0.15);
+                $("#div2").fadeTo("slow", 0.4);
+                $("#div3").fadeTo("slow", 0.7);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!--DemonstratefadeIn(),fadeOut(),fadeToggle(), fadeTo() with creative ideas.-->
+    <p class="fw-bold fs-4">fadeIn()&emsp;&emsp;&emsp;&emsp;&emsp;fadeOut()&emsp;&emsp;&emsp;&emsp;&emsp;fadeToggle()&nbsp;&emsp;&emsp;&emsp;fadeTo()</p>
+
+    <button id="btn1" class="btn btn-success fw-bold">Click to FadeIn Boxes</button>&emsp;
+    <button id="btn2" class="btn btn-success fw-bold">Click to FadeOut Boxes</button>&emsp;
+    <button id="btn3" class="btn btn-success fw-bold">Click to FadeToggle Boxes</button>&emsp;
+    <button id="btn4" class="btn btn-success fw-bold">Click to FadeTo Boxes</button>
+    <br><br>
+
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:orange;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:blue;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:green;"></div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial-4.6</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").mouseenter(function () {
+                $("#ce_des").css("background-color", "yellow");
+            });
+            $("p").mouseleave(function () {
+                $("#ce_des").css("background-color", "lightgray");
+            });
+            $("p").mouseenter(function () {
+                $("#me_des").css("background-color", "yellow");
+            });
+            $("p").mouseleave(function () {
+                $("#me_des").css("background-color", "lightgray");
+            });
+            $("p").mouseenter(function () {
+                $("#cv_des").css("background-color", "yellow");
+            });
+            $("p").mouseleave(function () {
+                $("#cv_des").css("background-color", "lightgray");
+            });
+        });
+
+        $(document).ready(function () {
+            $("div").mouseup(function () {
+                $(this).after("<h4 style='color:green; text-align:center'>Mouse button Released.</h4>");
+            });
+            $("div").mousedown(function () {
+                $(this).after("<h4 style='color:purple; text-align:center'>Mouse button Pressed.</h4>");
+            });
+        });
+
+        $(document).ready(function () {
+            $(document).mousemove(function (event) {
+                $("span").text(event.pageX + ", " + event.pageY);
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <!--Demonstrate at least 5 mouse events with your creative ideas in tutorial 1 web pages.-->
+    <div class="w3-container w3-red">
+        <h1>Engineering Courses</h1>
+        <p>Resize this responsive page!</p>
+    </div>
+    <div class="w3-row">
+        <p style="text-align: right;" class="fw-bold fs-5">Mouse is at coordinates: <span></span>.</p>
+        <div class="w3-third w3-padding-large">
+            <h3>Computer Engineering</h3>
+            <p class="w3-justify" id="ce_des">It is a four years (eight semester) full-time undergraduate program. Out
+                of eight
+                semester, seven
+                semesters are dedicated to in house study involving course work and projects.
+            </p>
+            <img src="https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1620064208/CyberDegrees.org/shutterstock_1357078655/shutterstock_1357078655.jpg"
+                class="w3-border w1-padding w3-round" alt="CE" style="width:100%">
+            <br><br>
+            <div class="w3-animate-opacity">
+                <div class="w3-center">
+                    <div class="w3-bar">
+                        <button class="w3-button w3-teal" onclick="window.location.href='ce.html'">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-third w3-padding-large">
+            <h3>Mechanical Engineering</h3>
+            <p class="w3-justify" id="me_des">The aim of the engineering is to create a flexible undergraduate education
+                experience
+                in design,
+                mathematics, modeling, computer.
+            </p>
+            <img src="https://th.bing.com/th/id/OIP.QiPHiqzySH6TxJbDz5-X8wHaFL?pid=ImgDet&rs=1"
+                class="w1-border w1-padding w3-round" alt="ME" style="width:100%">
+            <br><br>
+            <div class="w3-animate-opacity">
+                <div class="w3-center">
+                    <div class="w3-bar">
+                        <button class="w3-button w3-teal" onclick="window.location.href='me.html'">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-third w3-padding-large">
+            <h3>Civil Engineering</h3>
+            <p class="w3-justify" id="cv_des">The objectve of the B.Tech graduate program in Engineering is to give the
+                understudies.</p>
+            <img src="https://th.bing.com/th/id/OIP.1SUMzf7-AA_5hl-62xksJQHaE8?pid=ImgDet&rs=1"
+                class="w1-border w1-padding w3-round" alt="CV" style="width:100%">
+            <br><br>
+            <div class="w3-animate-opacity">
+                <div class="w3-center">
+                    <div class="w3-bar">
+                        <button class="w3-button w3-teal" onclick="window.location.href='cv.html'">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h4>
+        <div class="text-center w3-border fw-bold">Click Here To See Change!!!</div>
+    </h4>
+    <br />
+    <button class="w3-btn w3-red w3-border-black w3-round-xxlarge" onclick="window.location.href='contact_us.html'">
+        Contact Us
+    </button>
+</body>
+
+</html>
